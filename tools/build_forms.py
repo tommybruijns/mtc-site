@@ -150,7 +150,7 @@ HEAD = """<!doctype html>
 <meta name="description" content="{desc}">
 <meta name="theme-color" content="#0b1d33">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<link rel="canonical" href="https://mtcrealestateinfo.com/{slug}">
+<link rel="canonical" href="https://mtcrealestate.nl/{slug}">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>

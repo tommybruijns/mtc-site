@@ -4,7 +4,7 @@
   "use strict";
   var CFG = {
     portal: "149514484",
-    forms: { buyer: "REPLACE_WITH_BUYER_FORM_GUID", seller: "REPLACE_WITH_SELLER_FORM_GUID" },
+    forms: { buyer: "287a40bf-f9e2-41a1-ae89-f2916a98fefe", seller: "4968d923-1de7-48d0-8bac-4d9f00290d74" },
     endpoint: "https://api.hsforms.com/submissions/v3/integration/submit/",
     minSeconds: 4,          // a human needs longer than this to fill the form
     timeoutMs: 15000

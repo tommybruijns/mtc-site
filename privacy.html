@@ -5,12 +5,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Privacyverklaring | MTC Real Estate</title>
 <meta name="description" content="Privacyverklaring van MTC Real Estate">
+<meta name="theme-color" content="#0b1d33">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <a class="skip" href="#main">Naar inhoud</a>
 <header class="top"><div class="wrap">
-<a class="brand" href="index.html">MTC <span>Real Estate</span></a>
+<a class="brand" href="index.html" aria-label="MTC Real Estate"><span class="mono" aria-hidden="true">MTC</span><span class="bname">Real Estate</span></a>
 <nav aria-label="Hoofdmenu">
 <a href="index.html#verkopers"><span lang-nl>Verkopers</span><span lang-en lang="en">Sellers</span></a>
 <a href="index.html#beleggers"><span lang-nl>Beleggers</span><span lang-en lang="en">Investors</span></a>
@@ -20,7 +22,7 @@
 </nav>
 <button class="lang" id="lang" type="button" aria-label="Taal / Language">EN</button>
 </div></header>
-<main id="main"><section><div class="wrap" style="max-width:760px">
+<main id="main"><section class="legal"><div class="wrap">
 <p class="note" lang-nl>Concept, nog te controleren door Thomas Bruijns. Laatst bijgewerkt: oktober 2026.</p>
 <p class="note" lang-en lang="en">Draft, to be reviewed by Thomas Bruijns. Last updated: October 2026. The Dutch text is leading.</p>
 <h2 lang-nl>Privacyverklaring</h2><h2 lang-en lang="en">Privacy statement</h2>
@@ -44,9 +46,13 @@
 <p>© 2026 MTC Real Estate</p>
 </div></footer>
 <script>
-(function(){var h=document.documentElement,b=document.getElementById("lang");
+(function(){var h=document.documentElement,b=document.getElementById("lang");h.classList.add("js");
 function set(l){h.setAttribute("data-lang",l);h.lang=l;b.textContent=l==="nl"?"EN":"NL";try{localStorage.setItem("l",l)}catch(e){}}
 try{var s=localStorage.getItem("l");if(s)set(s)}catch(e){}
-b.addEventListener("click",function(){set(h.getAttribute("data-lang")==="nl"?"en":"nl")});})();
+b.addEventListener("click",function(){set(h.getAttribute("data-lang")==="nl"?"en":"nl")});
+var r=document.querySelectorAll(".reveal");
+if(!("IntersectionObserver" in window)||matchMedia("(prefers-reduced-motion: reduce)").matches){r.forEach(function(e){e.classList.add("in")});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.12});
+r.forEach(function(e){io.observe(e)});})();
 </script>
 </body></html>
